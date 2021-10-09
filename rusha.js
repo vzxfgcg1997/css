@@ -184,11 +184,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'عنوان الموضوع';
+   var tocHead1 = 'заголовок темы';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'التاريخ';
+   var tocHead2 = 'Дата';
    var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'الأقسام';
+   var tocHead3 = 'разделы';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -235,10 +235,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note"> عدد الموضوعات ' + postTitle.length + ' موضوع<br/></span>'; }
+      var tocNote = '<span class="toc-note"> количество тем ' + postTitle.length + ' Тема<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">عدد الموضوعات ' + numDisplayed + ' الخاصة بقسم \'';
-      tocNote += postFilter + '\' *** '+ postTitle.length + ' العدد الكلى للموضوعات<br/></span>';
+      var tocNote = '<span class="toc-note">количество тем ' + numDisplayed + ' именование \'';
+      tocNote += postFilter + '\' *** '+ postTitle.length + ' Общее количество предметов<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
