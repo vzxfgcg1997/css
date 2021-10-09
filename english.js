@@ -184,11 +184,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'عنوان الموضوع';
+   var tocHead1 = 'topic title';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'التاريخ';
+   var tocHead2 = 'Date';
    var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'الأقسام';
+   var tocHead3 = 'sections';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -235,10 +235,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note"> عدد الموضوعات ' + postTitle.length + ' موضوع<br/></span>'; }
+      var tocNote = '<span class="toc-note"> number of topics ' + postTitle.length + ' Topics<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">عدد الموضوعات ' + numDisplayed + ' الخاصة بقسم \'';
-      tocNote += postFilter + '\' *** '+ postTitle.length + ' العدد الكلى للموضوعات<br/></span>';
+      var tocNote = '<span class="toc-note">number of topics ' + numDisplayed + ' Department of \'';
+      tocNote += postFilter + '\' *** '+ postTitle.length + ' The total number of subjects<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
